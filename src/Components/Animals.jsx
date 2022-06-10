@@ -1,3 +1,5 @@
+import Animal from "./Animal";
+
 const animals = [
     {
       id: 1,
@@ -51,7 +53,9 @@ const animals = [
   
   const Animals = () => {
     return <>
-  
+    {
+        animals.map(object => <Animal key={object.id} name={object.animal} photo={object.img}/>)
+    }
     </>;
   };
   
