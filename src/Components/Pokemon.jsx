@@ -1,8 +1,18 @@
-const Pokemon = (props) => {
+const Pokemon = (name, url) => {
     return (
-        <li>
-            {props.vardas} <a href={props.urlas}> daugiau info apie {props.vardas}</a>
-        </li>
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "5px",
+            marginBottom: "20px"
+        }}>
+            <div>
+                <b>Name:</b><i style={{fontSize: '20px', fontWeight: '500', marginLeft: '10px'}}>{name}</i>
+            </div>
+            <div>
+                <b>Link:</b><i style={{fontSize: '20px', fontWeight: '500', marginLeft: '10px'}}>{url}</i>
+            </div>
+        </div>
     );
 };
 
